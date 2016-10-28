@@ -1,0 +1,4 @@
+{"a":  false,  "b": 2, "records": [
+  {"id": 3, "name": "some", "active": true},
+  {"id": 5, "name": "another", "active": false}
+]}
