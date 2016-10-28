@@ -11,6 +11,7 @@ class JsonReaderTest extends TestCase
     {
         $reader = $this->createReaderByFileName('test.json');
         $expectedTokens = [
+            /** [depth, state, value] */
             [1, JsonReaderInterface::STATE_OBJECT_START,    null],
             [1, JsonReaderInterface::STATE_OBJECT_KEY,      'a'],
             [1, JsonReaderInterface::STATE_VALUE,           false],
