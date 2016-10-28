@@ -4,16 +4,16 @@
     "keywords": [
         "json",
         "reader",
-        "parser",
+        "json parser",
         "stream",
-        "huge",
-        "large",
+        "huge json",
+        "large json",
         "memory safety"
     ],
     "authors": [
         {
             "name": "Iurii Barabash",
-            "email": "iurii.barabash@gmail.com"
+            "email": "webdevcraft@gmail.com"
         }
     ],
     "require": {},
