@@ -90,4 +90,3 @@ Factory supports any sources by such methods:
 1. __createByCharacterTraversable__ - if options above do not suite your needs feel free to write your custom characters iterator using any source you have to deal with. For example you could iterate _PSR-7 Message\StreamInterface::read($acceptableSize)_ and iterate characters inside each of _read()_
 
 [Example of characters iterators](https://github.com/webdevcraft/jsonreader/tree/master/src/CharacterIterator)
-
