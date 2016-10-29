@@ -1,4 +1,7 @@
 # JsonReader
+
+[![Build Status](https://travis-ci.org/webdevcraft/jsonreader.svg?branch=master)](https://travis-ci.org/webdevcraft/jsonreader)
+
 JSON streaming reader (memory safety parser) with chunking option
 
 ## Purpose and advantages
