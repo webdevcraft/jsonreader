@@ -4,7 +4,7 @@
 
 JSON streaming reader (memory safety parser) with chunking option
 
-## Purpose and advantages
+## Purpose and Advantages
 1. **Memory safety** read of huge JSON files: solve "out of RAM" problem. Successfully tested with 1.5Gb JSON files
 1. Possibility to split large JSON file to smaller **JSON chunks**
 1. **Custom traverse** through JSON tree
@@ -20,12 +20,11 @@ With Composer:
 composer require webdevcraft/jsonreader
 ```
 
-## Usage
+## Basic Usage
 
-### Basic
 JSON Reader iterates through JSON structure elements
 
-Each ```$reader->read()``` iterates to next element until it returns ```false``` when finished
+Each ```$reader->read()``` iterates to next element until it returns _false_ when finished
 
 So common usage is:
 ```php
@@ -62,7 +61,7 @@ Reader provides information on each element:
     
 **Example** of elements sequence for [test.json](https://github.com/webdevcraft/jsonreader/blob/master/tests/data/test.json) is presented in [JsonReaderTest.php::testReadTokens()](https://github.com/webdevcraft/jsonreader/blob/master/tests/JsonReaderTest.php)
 
-### Chunks
+## Chunks Usage
 In case if your code is already dependent on JSON string denormanization you could use JsonReader library for chunking of huge file onto smaller JSON strings
 
 Just start buffering chunk on element position you wish by ```$reader->startWriteChunk()``` and get chunk by ```$reader->finishWriteChunk()```. That returnes JSON chunk string and flushes buffer.
@@ -73,7 +72,7 @@ That's nice practice to wrap chunks retrieve to iterator
 
 **Example** of [test.json](https://github.com/webdevcraft/jsonreader/blob/master/tests/data/test.json) chunking is presented in [JsonReaderTest.php::testChunks()](https://github.com/webdevcraft/jsonreader/blob/master/tests/JsonReaderTest.php)
 
-### Factory
+## Factory Usage
 To create reader you have to use __JsonReaderFactory__
 
 Example of JsonReader creating:
@@ -87,8 +86,8 @@ Factory supports any sources by such methods:
 
 1. __createByFilePath__ by file path in local filesystem
 1. __createByString__ by JSON string passing
-1. __createByResource__ by opened resource link, for example with __fopen()__
-1. __createByCharacterTraversable__ - if options above do not suite your needs feel free to write your custom characters iterator using any source you have to deal with. For example you could iterate __PSR-7 Message\StreamInterface::read($acceptableSize)__ and iterate characters inside each of __read()__
+1. __createByResource__ by opened resource link, for example with _fopen()_
+1. __createByCharacterTraversable__ - if options above do not suite your needs feel free to write your custom characters iterator using any source you have to deal with. For example you could iterate _PSR-7 Message\StreamInterface::read($acceptableSize)_ and iterate characters inside each of _read()_
 
 [Example of characters iterators](https://github.com/webdevcraft/jsonreader/tree/master/src/CharacterIterator)
  
