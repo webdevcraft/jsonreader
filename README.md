@@ -12,7 +12,7 @@ JSON streaming reader (memory safety parser) with chunking option
 1. Installation with **Composer**, no need any extra PHP extensions
 
 ## Requirements
-PHP 5.5, 5.6, 7.0 or above
+PHP 5.6, 7.0
 
 ## Installation
 With Composer:
