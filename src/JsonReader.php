@@ -447,9 +447,6 @@ class JsonReader implements ChunkJsonReaderInterface
             }
             $objectKey .= $character;
         }
-        if ($objectKey === '') {
-            throw new MalformedJsonException('Object key cannot be empty');
-        }
         $character = $this->characterIterator->getNextNonWhite();
         if ($character != ':') {
             throw new MalformedJsonException('Expected : after object key');
